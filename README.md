@@ -23,17 +23,23 @@ Although the app is functional without this, you will see an overlay on the map 
 
 Running the app
 --------------------
+
 **On a browser window**
+
 The app is already set to run in this environment, just type `ionic serve` and a browser window will open automatically.
 
 **On a device**
+
 *Removing the ATM service proxy*
+
 In order to run on the local browser, we have set up a proxy so we can make calls to the ATM service in that environment. However, this is not needed when running as a Cordova app and should be disabled using the following command.
 
 	gulp remove-proxy
+	
 > **Note:** You can use `gulp add-proxy` to revert the change.
 
 *Adding a platform*
+
 You need to add the target platforms for the app. For example, for Windows 10 you would need to type:
 
 	ionic platform add "windows@https://aka.ms/cordova-win10"
