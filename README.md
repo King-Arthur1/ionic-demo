@@ -14,7 +14,9 @@ Before running the app there are a few things you should install.
 
 	npm install
 	bower install
+	
 **Bing API Key**
+
 Although the app is functional without this, you will see an overlay on the map that will cover part of the pushpins. You can get a free API Key on [Bing Maps Portal](https://www.bingmapsportal.com/). Once you get it, execute the following Gulp task to add it to the app:
 
 	gulp add-bingkey --key <your API key>
