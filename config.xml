@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.msedgeteam.coopatms226798" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>coopatms</name>
+  <description>
+        Sample Ionic app to find ATMs in the CO-OP network.
+    </description>
+  <author email="" href="http://dev.modern.ie/">
+      Microsoft Edge Platform Team
+    </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="orientation" value="portrait" />
+  <preference name="windows-target-version" value="10.0" />
+  <preference name="windows-phone-target-version" value="10.0" />
+  <preference name="Windows.Universal-MinVersion" value="10.0.10069.0" />
+  <preference name="Windows.Universal-MaxVersionTested" value="10.0.10166.0" />
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+</widget>

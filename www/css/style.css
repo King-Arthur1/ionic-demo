@@ -1,0 +1,134 @@
+.logo {
+    margin-top: 5vh;
+}
+
+.logo img{
+    height: 10vh;
+    vertical-align: middle;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.list-inset-header {
+    padding: 0;
+    font-weight: lighter;
+    font-size: 1.5em;
+}
+
+.add-padding-bottom {
+    padding-bottom: 10px;
+}
+
+.has-subheader {
+    top: 36vh;
+}
+
+.bing-map {
+    height: 30vh;
+}
+
+.bingMap {
+    width: 100%;
+    height: 100%;
+}
+
+.MapPushpinBase > img {
+    width: inherit;
+    height: inherit;
+}
+
+.item-inline {
+    display: inline;
+}
+
+.item-right {
+    float: right;
+}
+
+.card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
+    border-radius: 0;
+}
+
+.item-divider {
+    padding: 0;
+}
+
+.item {
+    border: 0;
+}
+
+.no-radius {
+    border-radius: 0;
+}
+
+form .item {
+    border-color: #ddd;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.atm-index{
+    position: relative;
+    top: 20%;
+    font-size: 2.5em;
+}
+
+.item-select select {
+    background: transparent;
+}
+
+.has-error {
+    border-bottom: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+.form-error {
+    margin: 5px 0;
+    padding: 2px 0 2px 16px;
+    color: red;
+}
+
+/* Loading template */
+
+@-webkit-keyframes uil-poi-anim0 {
+    0% { transform: translateY(15%); }
+    50% { transform: translateY(-15%); }
+    100% { transform: translateY(15%); }
+}
+
+@-moz-keyframes uil-poi-anim0 {
+    0% { transform: translateY(15%); }
+    50% { transform: translateY(-15%); }
+    100% { transform: translateY(15%); }
+}
+
+@keyframes uil-poi-anim0 {
+    0% { transform: translateY(15%); }
+    50% { transform: translateY(-15%); }
+    100% { transform: translateY(15%); }
+}
+
+.loading-icon {
+    display: block;
+    margin: auto;
+    -moz-animation: uil-poi-anim0 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+    -webkit-animation: uil-poi-anim0 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+    animation: uil-poi-anim0 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+}
+
+/* Ionic style overrides */
+
+.loading-container > .loading {
+    border-radius: 0 !important;
+}
+
+.title, .back-text {
+    font-weight: lighter !important;
+}
+
+button {
+    border-radius: 0 !important;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<ion-view view-title="{{atm.Name}}">
+
+    <div class="bar bar-subheader bing-map">
+        <bing-map pushpins="{latitude:atm.Latitude, longitude:atm.Longitude}" apikey="bingApiKey"/>
+    </div>
+
+    <ion-content class="has-subheader" has-bouncing="false">
+        <div class="list list-inset no-radius">
+            <div class="item list-inset-header positive">Address</div>
+            <div class="item" ng-click="navigate()"><p><span class="item-note">Tap to navigate</span>{{atm.Address}}<br>{{atm.City}}, {{atm.State}} {{atm.Zip}}</p></div>
+        </div>
+
+        <div class="list list-inset no-radius">
+            <div class="item list-inset-header positive" ng-show="hasFeatures">Features</div>
+            <div class="item item-icon-left" ng-show="atm.Hours"><i class="icon ion-clock positive"></i>{{atm.Hours}}</div>
+            <div class="item item-icon-left" ng-show="atm.AcceptsDeposit == 'Y'"><i class="icon ion-cash positive"></i>Accepts deposits</div>
+            <div class="item item-icon-left" ng-show="atm.RetailInfo">
+                <i class="icon ion-pricetag positive"></i>{{atm.RetailInfo}} <span class="item-note">Retail info</span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

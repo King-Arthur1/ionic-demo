@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    
+    <!-- other bower packages -->
+    <script src="lib/lodash/lodash.min.js"></script>
+    <script src="lib/papa.parse/papaparse.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script charset="UTF-8" type="text/javascript" src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services/VendorServices.js"></script>
+    <script src="js/services/GeoLocationService.js"></script>
+    <script src="js/services/LaunchNavigatorService.js"></script>
+    <script src="js/services/AtmService.js"></script>
+    <script src="js/directives/bing-map.js"></script>
+    <script src="js/controllers/addressFormController.js"></script>
+    <script src="js/controllers/atmlistController.js"></script>
+    <script src="js/controllers/atmDetailController.js"></script>
+  </head>
+  <body ng-app="App">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button class="button-clear">
+
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

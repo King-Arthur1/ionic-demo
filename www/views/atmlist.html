@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<ion-view view-title="Search results">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-clear ion-help-circled" ng-click="showHelp()"></button>
+    </ion-nav-buttons>
+
+    <div class="bar bar-subheader bing-map">
+        <bing-map ng-show="mapPins" pushpins="mapPins" apikey="bingApiKey"/>
+    </div>
+
+    <ion-content class="has-subheader">
+        <div class="list">
+
+
+            <div class="item item-avatar" ng-repeat="atm in atmList" ng-click="goToDetail($index)">
+                <div class="item-image no-radius atm-index-container"><span class="positive atm-index">{{$index + 1}}</span></div>
+                <h2>{{atm.Name}}</h2>
+                <p class="item-inline">{{atm.Distance}}mi away</p>
+                <p class="item-right item-inline">
+                    <span class="positive" ng-show="atm.Hours == '24 HOURS ACCESS'">24h</span>
+                    <span class="positive" ng-show="atm.AcceptsDeposit == 'Y'">D</span>
+                </p>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
