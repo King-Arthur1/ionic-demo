@@ -94,9 +94,9 @@ form .item {
 /* Loading template */
 
 @-webkit-keyframes uil-poi-anim0 {
-    0% { transform: translateY(15%); }
-    50% { transform: translateY(-15%); }
-    100% { transform: translateY(15%); }
+    0% { -webkit-transform: translateY(15%); }
+    50% { -webkit-transform: translateY(-15%); }
+    100% { -webkit-transform: translateY(15%); }
 }
 
 @-moz-keyframes uil-poi-anim0 {
