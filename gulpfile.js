@@ -57,26 +57,29 @@ gulp.task('git-check', function(done) {
 
 var replaceFiles = ['./www/js/app.js'];
 var replaceDir = './www/js/';
-gulp.task('remove-proxy', function(){
-  gulp.src(replaceFiles)
-      .pipe(replace(/('AtmBaseUrl'\s*,\s*)''/g, "$1'https://co-opcreditunions.org/wp-content/themes/coop019901/inc'"))
-      .pipe(gulp.dest(replaceDir));
-});
-
-gulp.task('add-proxy', function(){
-  gulp.src(replaceFiles)
+gulp.task('proxy', function(){
+  if(argv.add)
+  {
+    gulp.src(replaceFiles)
       .pipe(replace(/('AtmBaseUrl'\s*,\s*)'https:\/\/co-opcreditunions\.org.+'/g, "$1''"))
       .pipe(gulp.dest(replaceDir));
+  }
+  else {
+    gulp.src(replaceFiles)
+      .pipe(replace(/('AtmBaseUrl'\s*,\s*)''/g, "$1'https://co-opcreditunions.org/wp-content/themes/coop019901/inc'"))
+      .pipe(gulp.dest(replaceDir));
+  }
 });
 
-gulp.task('add-bingkey', function(){
-  gulp.src(replaceFiles)
-      .pipe(replace(/('BingApiKey'\s*,\s*)''/g, "$1'" + argv.key + "'"))
-      .pipe(gulp.dest(replaceDir));
-});
-
-gulp.task('remove-bingkey', function(){
-  gulp.src(replaceFiles)
-      .pipe(replace(/('BingApiKey'\s*,\s*)'.*'/g, "$1''"))
-      .pipe(gulp.dest(replaceDir));
+gulp.task('bingkey', function(){
+  if(argv.add) {
+    gulp.src(replaceFiles)
+        .pipe(replace(/('BingApiKey'\s*,\s*)''/g, "$1'" + argv.add + "'"))
+        .pipe(gulp.dest(replaceDir));
+  }
+  else {
+    gulp.src(replaceFiles)
+        .pipe(replace(/('BingApiKey'\s*,\s*)'.*'/g, "$1''"))
+        .pipe(gulp.dest(replaceDir));
+  }
 });

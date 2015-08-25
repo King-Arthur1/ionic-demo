@@ -13,13 +13,14 @@ Before running the app there are a few things you should install.
 **Node and Bower packages**
 
 	npm install
+  ionic state restore
 	bower install
-	
+
 **Bing API Key**
 
 Although the app is functional without this, you will see an overlay on the map that will cover part of the pushpins. You can get a free API Key on [Bing Maps Portal](https://www.bingmapsportal.com/). Once you get it, execute the following Gulp task to add it to the app:
 
-	gulp add-bingkey --key <your API key>
+	gulp bingkey --add <your API key>
 
 Running the app
 --------------------
@@ -34,9 +35,9 @@ The app is already set to run in this environment, just type `ionic serve` and a
 
 In order to run on the local browser, we have set up a proxy so we can make calls to the ATM service in that environment. However, this is not needed when running as a Cordova app and should be disabled using the following command.
 
-	gulp remove-proxy
-	
-> **Note:** You can use `gulp add-proxy` to revert the change.
+	gulp proxy --remove
+
+> **Note:** You can use `gulp proxy --add` to revert the change.
 
 *Adding a platform*
 
