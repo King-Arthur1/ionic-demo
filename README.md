@@ -13,7 +13,7 @@ Before running the app there are a few things you should install.
 **Node and Bower packages**
 
 	npm install
-  ionic state restore
+	ionic state restore
 	bower install
 
 **Bing API Key**
