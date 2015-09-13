@@ -50,3 +50,8 @@ After that, just type `ionic build windows` to build the AppX package which you 
 >**Note:** You need to have the phone in Developer Mode in order to install the app, which can be enabled in the Settings app.
 
 For more commands, check out the [Windows Platform Guide](http://cordova.apache.org/docs/en/edge/guide_platforms_win8_index.md.html#Windows%208%20Platform%20Guide).
+
+Additional Notes
+----------------
+
+This demo application uses data publicly available on the [Co-Op Network ATM Locator](https://co-opcreditunions.org/locator/) site. Co-Op and Co-Op Network are registered trademarks of Co-Op Financial Services.
